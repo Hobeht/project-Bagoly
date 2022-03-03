@@ -12,11 +12,10 @@ namespace LogoKaresz
     public partial class Form1
     {
 		void levél(double meret, Color szin)
-		{
-			defaultkaresz.Előre(meret);
-			defaultkaresz.Ív(meret * 0.6, 90);
-			Fordulj(120);
-			defaultkaresz.Ív(meret * 0.6, 90);
-		}
+        {
+			Bezier(70, 90, 60, 25, 150, true, true);
+			Fordulj(90);
+			Bezier(60, 180, 10, -90, 120, true, true);
+        }
 	}
 }

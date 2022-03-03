@@ -11,7 +11,7 @@ namespace LogoKaresz
 		void FELADAT()
 		{
 
-			keretdarab(200, Color.Blue, Color.Red);
+			láb(100, Color.Black);
 		}
 	}
 }

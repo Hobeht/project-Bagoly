@@ -10,7 +10,36 @@ using System.Windows.Forms;
 namespace LogoKaresz
 {
     partial class Form1
-    {void keretdarab(int méret, Color ív_szín,Color körszín)
+    { void láb(int méret, Color szín)
+        {
+			Ív(180, méret);
+			Jobbra(90);
+            for (int i = 0; i < 2; i++)
+            {
+				Előre(méret / 2.5);
+				Jobbra(60);
+				Előre(méret / 2.5);
+				Balra(120);
+				Előre(méret / 2.5);
+				Jobbra(60);
+
+			}
+			Előre(méret / 2.5);
+			Tollat(fel);
+			Jobbra(120);
+			Előre(méret / 4);
+			Tölt(szín);
+			Tollat(le);
+			Tollat(fel);
+			Hátra(méret / 4);
+			Balra(120);
+			Tollat(le);
+			Jobbra(90);
+			
+			
+			
+		}
+		void keretdarab(int méret, Color ív_szín,Color körszín)
         {
 			Ív(90, méret);
 			Balra(180);

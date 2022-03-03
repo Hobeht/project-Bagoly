@@ -16,7 +16,7 @@ namespace LogoKaresz
 			defaultkaresz.Előre(meret);
 			defaultkaresz.Ív(meret * 0.6, 90);
 			Fordulj(120);
-			defaultkaresz.Ív(-1 * meret * 0.6, 90);
+			defaultkaresz.Ív(meret * 0.6, 90);
 		}
 	}
 }

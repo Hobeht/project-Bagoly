@@ -110,5 +110,23 @@ namespace LogoKaresz
 			Hátra(méret);
 			Tollat(le);
 		}
+		void virágszár(int méret,Color szín)
+        {
+			Előre(méret);
+			Ív(180, méret / 10);
+			Előre(méret);
+			Jobbra(90);
+			Előre(méret / 5);
+			Jobbra(90);
+			Tollat(fel);
+			Jobbra(45);
+			Előre(méret / 10);
+			Tollat(le);
+			Tölt(szín);
+			Tollat(fel);
+			Hátra(méret / 10);
+			Balra(45);
+
+        }
     }
 }

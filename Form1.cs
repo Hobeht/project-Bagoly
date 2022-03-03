@@ -11,7 +11,7 @@ namespace LogoKaresz
 		void FELADAT()
 		{
 			Előre(100);
-			tollak(50, Color.Brown);
+			virágszár(100, Color.Black);
 		}
 	}
 }

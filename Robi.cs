@@ -30,7 +30,7 @@ namespace LogoKaresz
 			Előre(méret / 4);
 			Tölt(szín);
 			Tollat(le);
-			Tollat(fel);
+			Tollat(fel); 
 			Hátra(méret / 4);
 			Balra(120);
 			Tollat(le);
@@ -92,6 +92,23 @@ namespace LogoKaresz
 			Hátra(0.6 * méret);
 			Tollat(le);
 			Balra(90);
+		}void tollak(int méret,Color szín)
+        {
+			Ív(90, méret);
+			Jobbra(180);
+			Ív(90, méret);
+			Hátra(méret*2);
+			Tollat(fel);
+			Előre(méret);
+			Jobbra(90);
+			Előre(méret / 5);
+			Tollat(le);
+			Tölt(szín);
+			Tollat(fel);
+			Hátra(méret / 5);
+			Balra(90);
+			Hátra(méret);
+			Tollat(le);
 		}
     }
 }

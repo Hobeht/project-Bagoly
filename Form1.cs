@@ -10,8 +10,8 @@ namespace LogoKaresz
 		
 		void FELADAT()
 		{
-
-			láb(100, Color.Black);
+			Előre(100);
+			tollak(50, Color.Brown);
 		}
 	}
 }

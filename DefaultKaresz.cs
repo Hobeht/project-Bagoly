@@ -63,7 +63,6 @@ namespace LogoKaresz
         #region deOOP-függvények (formmetódusváltozatok)
         
         bool Kilépek_e_a_pályáról(double d) => defaultkaresz.Kilépek_e_a_pályáról(d);
-        void Előre(double d) => defaultkaresz.Előre(d);
         void Hátra(double d) => defaultkaresz.Hátra(d);
         void Jobbra(double d) => defaultkaresz.Jobbra(d);
         void Balra(double d) => defaultkaresz.Balra(d);
@@ -75,7 +74,6 @@ namespace LogoKaresz
         void Tollszín(Color c) => defaultkaresz.Tollszín(c);
         void Tollszín(int i) => defaultkaresz.Tollszín(i);
         void Tollvastagság(float v) => defaultkaresz.Tollvastagság(v);
-        void Ív(double f, double r) => defaultkaresz.Ív(f, r);
         void Ív((double, double)fr) => defaultkaresz.Ív(fr.Item1, fr.Item2);
 
         /// <summary>

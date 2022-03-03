@@ -8,12 +8,12 @@ namespace LogoKaresz
 	public partial class Form1 : Form
 	{
 		/* Függvények */
-
+		
 
 		/* Függvények vége */
 		void FELADAT()
 		{
-			Előre(10); 
+			levél(100, Color.Red);
 		}
 	}
 }

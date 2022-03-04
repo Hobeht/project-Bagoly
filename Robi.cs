@@ -7,10 +7,42 @@ using System.Drawing;
 using System.Threading;
 using System.Windows.Forms;
 
+
 namespace LogoKaresz
 {
     partial class Form1
-    {
+    {void nemfogyatékosív(double szög,double méret,string merre)
+        {
+
+			for (int i = 0; i < szög; i++)
+			{Előre(2 * méret * Math.Tan(Math.PI / 360));
+				if (merre=="Balra")
+				{
+					Balra(1);
+				}
+				else
+				{
+			      Jobbra(1);
+				}
+			}
+        }
+		void oldalra(int méret,bool rajzol_e)
+        {
+		if (rajzol_e==false)
+		{
+				Tollat(fel);
+		}
+		Jobbra(90);
+		Előre(méret);
+		Balra(90);
+		if (rajzol_e==false)
+		{
+			Tollat(le);
+		}
+
+        }
+
+		#region láb
 		void láb(int méret, Color szín)
 		{
 			Ív(180, méret);
@@ -40,6 +72,8 @@ namespace LogoKaresz
 
 
 		}
+		#endregion
+		#region keretdarab
 		void keretdarab(int méret, Color ív_szín, Color körszín,bool irány)
         {
             if (irány==true)
@@ -154,6 +188,8 @@ namespace LogoKaresz
 			}
 			
 		}
+		#endregion
+		#region toll
 		void tollak(int méret, Color szín,bool féltoll)
         {
             if (féltoll==false)
@@ -197,7 +233,20 @@ namespace LogoKaresz
 			}
 			
 		}
-		
+		#endregion
+		#region tollsor
+		void tollsor(int hossz,int méret,Color szín)
+        {tollak(méret,szín,true);
+			for (int i = 0; i < hossz; i++)
+			{
+				tollak(méret,szín,false);
+				oldalra(méret*2);
+			}
+			tollak(méret,szín,true);
+
+        }
+		#endregion
+		#region szár
 		void virágszár(int méret, Color szín)
 		{
 			Előre(méret);
@@ -216,6 +265,8 @@ namespace LogoKaresz
 			Balra(45);
 
 		}
+		#endregion
+		#region jobbkeret
 		void jobboldalikeret(int felsőhossz, int jobbhossz, int alsóhossz, int méret,Color körszín ,Color szín)
         {
             for (int i = 0; i < felsőhossz; i++)
@@ -249,6 +300,7 @@ namespace LogoKaresz
 			}
 			keretdarab(méret, szín, körszín,true);
 		}
+		#endregion
 
 	}
 

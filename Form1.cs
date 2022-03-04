@@ -13,7 +13,7 @@ namespace LogoKaresz
 			Tollat(fel);
 			Előre(150);
 			Tollat(le);
-			keretdarab(100, Color.Brown, Color.Red, false);
+			nemfogyatékosív(180,100,Balra);
 
 		}
 	}

@@ -13,10 +13,30 @@ namespace LogoKaresz
     {
 		void levél(double meret, Color szin)
         {
-			Bezier(70, 90, 60, 25, 150, true, true);
+			Bezier(70, 90, 60, 25, 150);
 			Fordulj(90);
-            Bezier(60, 180, 30, -90, 120, true, true);
-            defaultkaresz.Ív(30, -meret);
+            Bezier(60, 180, 30, -90, 120);
+            Fordulj(-20);
+            defaultkaresz.Előre(meret/4);
+            Fordulj(5);
+            defaultkaresz.Előre(meret/4);
+            Fordulj(5);
+            defaultkaresz.Előre(meret/4);
+            Fordulj(5);
+            defaultkaresz.Előre(meret/4);
+            Fordulj(5);
+            defaultkaresz.Előre(meret/4);
+            defaultkaresz.Előre(meret/7);
+            Fordulj(90);
+            defaultkaresz.Előre(meret/1.265);
+            Tollat(fel);
+            Fordulj(135);
+            defaultkaresz.Előre(meret/4);
+            Tölt(szin);
+            defaultkaresz.Hátra(meret/4);
+            Fordulj(-45);
+            Tollat(le);
+            
         }
         void félkör(double meret, Color szin) 
         { 

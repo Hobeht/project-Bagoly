@@ -40,59 +40,119 @@ namespace LogoKaresz
 
 
 		}
-		void keretdarab(int méret, Color ív_szín, Color körszín)
-		{
-			Ív(90, méret);
-			Balra(180);
+		void keretdarab(int méret, Color ív_szín, Color körszín,bool irány)
+        {
+            if (irány==true)
+            {
+				Ív(90, méret);
+				Balra(180);
 
-			Tollat(fel);
-			Előre(1.5 * méret);
-			Tollat(le);
-			Jobbra(270);
+				Tollat(fel);
+				Előre(1.5 * méret);
+				Tollat(le);
+				Jobbra(270);
 
-			Ív(180, -0.75 * méret);
-			Balra(90);
-			Tollat(fel);
-			Előre(1.5 * méret);
-			Tollat(le);
-			Jobbra(90);
-			Hátra(méret);
-			Balra(90);
-			Hátra(méret / 2);
-			Jobbra(40);
-			Tollat(fel);
-			Előre(méret / 5);
+				Ív(180, -0.75 * méret);
+				Balra(90);
+				Tollat(fel);
+				Előre(1.5 * méret);
+				Tollat(le);
+				Jobbra(90);
+				Hátra(méret);
+				Balra(90);
+				Hátra(méret / 2);
+				Jobbra(40);
+				Tollat(fel);
+				Előre(méret / 5);
 
-			Tollat(le);
-			Tölt(ív_szín);
-			Tollat(fel);
-			Hátra(méret / 5);
-			Balra(40);
-			Tollat(le);
-			Jobbra(180);
-			Tollat(fel);
-			Előre(0.4 * méret);
-			Balra(90);
-			Előre(0.45 * méret);
+				Tollat(le);
+				Tölt(ív_szín);
+				Tollat(fel);
+				Hátra(méret / 5);
+				Balra(40);
+				Tollat(le);
+				Jobbra(180);
+				Tollat(fel);
+				Előre(0.4 * méret);
+				Balra(90);
+				Előre(0.45 * méret);
 
-			Tollat(le);
-			Ív(360, méret * 0.2);
-			Tollat(fel);
-			Jobbra(90);
-			Előre(méret * 0.1);
-			Tollat(le);
-			Tölt(körszín);
-			Tollat(fel);
-			Hátra(méret * 0.1);
-			Balra(90);
-			Tollat(le);
-			Tollat(fel);
+				Tollat(le);
+				Ív(360, méret * 0.2);
+				Tollat(fel);
+				Jobbra(90);
+				Előre(méret * 0.1);
+				Tollat(le);
+				Tölt(körszín);
+				Tollat(fel);
+				Hátra(méret * 0.1);
+				Balra(90);
+				Tollat(le);
+				Tollat(fel);
 
-			Hátra(0.45 * méret);
-			Jobbra(90);
-			Hátra(0.4 * méret);
-			Tollat(le);
-			Balra(90);
+				Hátra(0.45 * méret);
+				Jobbra(90);
+				Hátra(0.4 * méret);
+				Tollat(le);
+				Balra(90);
+
+			}
+            else
+            {
+				Balra(90);
+				Ív(90, -méret);
+				Balra(180);
+
+				Tollat(fel);
+				Előre(1.5 * méret);
+				Tollat(le);
+				Jobbra(270);
+
+				Ív(180, -0.75 * méret);
+				Balra(90);
+				Tollat(fel);
+				Előre(1.5 * méret);
+				Tollat(le);
+				Jobbra(90);
+				Hátra(méret);
+				Balra(90);
+				Hátra(méret / 2);
+				Jobbra(40);
+				Tollat(fel);
+				Előre(méret / 5);
+
+				Tollat(le);
+				Tölt(ív_szín);
+				Tollat(fel);
+				Hátra(méret / 5);
+				Balra(40);
+				Tollat(le);
+				Jobbra(180);
+				Tollat(fel);
+				Előre(0.4 * méret);
+				Balra(90);
+				Előre(0.45 * méret);
+
+				Tollat(le);
+				Ív(360, méret * 0.2);
+				Tollat(fel);
+				Jobbra(90);
+				Előre(méret * 0.1);
+				Tollat(le);
+				Tölt(körszín);
+				Tollat(fel);
+				Hátra(méret * 0.1);
+				Balra(90);
+				Tollat(le);
+				Tollat(fel);
+
+				Hátra(0.45 * méret);
+				Jobbra(90);
+				Hátra(0.4 * méret);
+				Tollat(le);
+				Balra(90);
+			}
+			
 		}
 		void tollak(int méret, Color szín,bool féltoll)
         {
@@ -156,11 +216,11 @@ namespace LogoKaresz
 			Balra(45);
 
 		}
-		void jobboldalikeret(int alsóhossz,int felsőhossz, int jobbhossz,int méret,Color körszín ,Color szín)
+		void jobboldalikeret(int felsőhossz, int jobbhossz, int alsóhossz, int méret,Color körszín ,Color szín)
         {
             for (int i = 0; i < felsőhossz; i++)
             {
-				keretdarab(méret,szín,körszín);
+				keretdarab(méret,szín,körszín,true);
 				Tollat(fel);
 				Jobbra(90);
 				Előre(méret * 1.5);
@@ -170,7 +230,7 @@ namespace LogoKaresz
             }
             for (int i = 0; i < jobbhossz; i++)
             {
-				keretdarab(méret, szín, körszín);
+				keretdarab(méret, szín, körszín,true);
 				Tollat(fel);
 				Hátra(méret*1.75);
 				
@@ -180,14 +240,14 @@ namespace LogoKaresz
 			}
             for (int i = 0; i < alsóhossz; i++)
             {
-				keretdarab(méret, szín, körszín);
+				keretdarab(méret, szín, körszín,true);
 				Tollat(fel);
 				Jobbra(-90);
 				Előre(méret * 1.5);
 				Balra(-90);
 				Tollat(le);
 			}
-			keretdarab(méret, szín, körszín);
+			keretdarab(méret, szín, körszín,true);
 		}
 
 	}

@@ -13,7 +13,8 @@ namespace LogoKaresz
 			Tollat(fel);
 			Előre(150);
 			Tollat(le);
-			jobboldalikeret(5,5, 5,20, Color.Red, Color.CornflowerBlue);
+			keretdarab(100, Color.Brown, Color.Red, false);
+
 		}
 	}
 }

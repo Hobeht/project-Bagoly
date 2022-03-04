@@ -13,7 +13,7 @@ namespace LogoKaresz
 		/* Függvények vége */
 		void FELADAT()
 		{
-			defaultkareszlevél.(100, Color.Red);
+			levél(100, 5, Color.Brown);
 		}
 	}
 }

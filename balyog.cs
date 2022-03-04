@@ -11,21 +11,20 @@ namespace LogoKaresz
 {
     partial class Form1
     {
-		void levél(double meret, Color szin)
+		void levél(double meret, Color szin, bool irany)
         {
+            if (irany)
+	        {
 			Bezier(70, 90, 60, 25, 150);
 			Fordulj(90);
             Bezier(60, 180, 30, -90, 120);
             Fordulj(-20);
             defaultkaresz.Előre(meret/4);
-            Fordulj(5);
-            defaultkaresz.Előre(meret/4);
-            Fordulj(5);
-            defaultkaresz.Előre(meret/4);
-            Fordulj(5);
-            defaultkaresz.Előre(meret/4);
-            Fordulj(5);
-            defaultkaresz.Előre(meret/4);
+            for (int i = 0; i < 4; i++)
+			{
+                Fordulj(5);
+                defaultkaresz.Előre(meret/4);
+			}
             defaultkaresz.Előre(meret/7);
             Fordulj(90);
             defaultkaresz.Előre(meret/1.265);
@@ -36,7 +35,32 @@ namespace LogoKaresz
             defaultkaresz.Hátra(meret/4);
             Fordulj(-45);
             Tollat(le);
-            
+	        }
+            else
+	        {
+                Fordulj(180);
+			    Bezier(-70, 90, -60, -25, -150);
+		    	Fordulj(-90);
+		    	Fordulj(180);
+                Bezier(-60, 0, -30, 90, -120);
+			    Fordulj(20);
+                defaultkaresz.Előre(meret/4);
+			    for (int i = 0; i < 4; i++)
+			    {
+                    Fordulj(-5);
+                    defaultkaresz.Előre(meret/4);
+			    }
+			    defaultkaresz.Előre(meret/7);
+                Fordulj(-90);
+                defaultkaresz.Előre(meret/1.265);
+                Tollat(fel);
+                Fordulj(-135);
+                defaultkaresz.Előre(meret/4);
+                Tölt(szin);
+                defaultkaresz.Hátra(meret/4);
+                Fordulj(45);
+                Tollat(le);
+	        }
         }
         void félkör(double meret, Color szin) 
         { 
@@ -59,6 +83,10 @@ namespace LogoKaresz
                 defaultkaresz.Előre(meret);
                 Fordulj(összfordulas/felkörszam);
 			}
+        }
+        void viragkulso(double meret, Color szin)
+        { 
+            defaultkaresz.Ív(90, meret);
         }
 	}
 }

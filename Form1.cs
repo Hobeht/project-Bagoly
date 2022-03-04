@@ -13,7 +13,8 @@ namespace LogoKaresz
 		/* Függvények vége */
 		void FELADAT()
 		{
-			levél(100, Color.Green);
+			Fordulj(90);
+			viragkulso(100, Color.Red);
 		}
 	}
 }

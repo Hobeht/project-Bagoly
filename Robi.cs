@@ -71,12 +71,12 @@ namespace LogoKaresz
 			Tollat(le);
 			Jobbra(180);
 			Tollat(fel);
-			Előre(0.6 * méret);
+			Előre(0.4 * méret);
 			Balra(90);
 			Előre(0.45 * méret);
 
 			Tollat(le);
-			Ív(360, méret * 0.25);
+			Ív(360, méret * 0.2);
 			Tollat(fel);
 			Jobbra(90);
 			Előre(méret * 0.1);
@@ -90,28 +90,54 @@ namespace LogoKaresz
 
 			Hátra(0.45 * méret);
 			Jobbra(90);
-			Hátra(0.6 * méret);
+			Hátra(0.4 * méret);
 			Tollat(le);
 			Balra(90);
 		}
-		void tollak(int méret, Color szín)
-		{
-			Ív(90, méret);
-			Jobbra(180);
-			Ív(90, méret);
-			Hátra(méret * 2);
-			Tollat(fel);
-			Előre(méret);
-			Jobbra(90);
-			Előre(méret / 5);
-			Tollat(le);
-			Tölt(szín);
-			Tollat(fel);
-			Hátra(méret / 5);
-			Balra(90);
-			Hátra(méret);
-			Tollat(le);
+		void tollak(int méret, Color szín,bool féltoll)
+        {
+            if (féltoll==false)
+            {
+				Ív(90, méret);
+				Jobbra(180);
+				Ív(90, méret);
+				Hátra(méret * 2);
+				Tollat(fel);
+				Előre(méret);
+				Jobbra(90);
+				Előre(méret / 5);
+				Tollat(le);
+				Tölt(szín);
+				Tollat(fel);
+				Hátra(méret / 5);
+				Balra(90);
+				Hátra(méret);
+				Tollat(le);
+
+			}
+            else
+            {
+				Ív(90, méret);
+				Hátra(méret);
+				Balra(90);
+				Hátra(méret);
+				Előre(méret / 2);
+				Jobbra(90);
+				Tollat(fel);
+				Előre(méret / 8);
+				Tollat(le);
+				Tölt(szín);
+				Tollat(fel);
+				Hátra(méret /8);
+				Balra(90);
+				Hátra(méret / 2);
+				Tollat(le);
+
+
+			}
+			
 		}
+		
 		void virágszár(int méret, Color szín)
 		{
 			Előre(méret);
@@ -130,6 +156,40 @@ namespace LogoKaresz
 			Balra(45);
 
 		}
+		void jobboldalikeret(int alsóhossz,int felsőhossz, int jobbhossz,int méret,Color körszín ,Color szín)
+        {
+            for (int i = 0; i < felsőhossz; i++)
+            {
+				keretdarab(méret,szín,körszín);
+				Tollat(fel);
+				Jobbra(90);
+				Előre(méret * 1.5);
+				Balra(90);
+				Tollat(le);
+
+            }
+            for (int i = 0; i < jobbhossz; i++)
+            {
+				keretdarab(méret, szín, körszín);
+				Tollat(fel);
+				Hátra(méret*1.75);
+				
+				Tollat(le);
+
+
+			}
+            for (int i = 0; i < alsóhossz; i++)
+            {
+				keretdarab(méret, szín, körszín);
+				Tollat(fel);
+				Jobbra(-90);
+				Előre(méret * 1.5);
+				Balra(-90);
+				Tollat(le);
+			}
+			keretdarab(méret, szín, körszín);
+		}
+
 	}
 
 }

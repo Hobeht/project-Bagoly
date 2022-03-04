@@ -7,11 +7,13 @@ namespace LogoKaresz
 {
 	public partial class Form1 : Form
 	{
-		
+
 		void FELADAT()
 		{
-
-			keretdarab(200, Color.Blue, Color.Red);
+			Tollat(fel);
+			Előre(150);
+			Tollat(le);
+			jobboldalikeret(5,5, 5,20, Color.Red, Color.CornflowerBlue);
 		}
 	}
 }

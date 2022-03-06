@@ -177,5 +177,40 @@ namespace LogoKaresz
             Fordulj(180);
             Tollat(le);
         }
+        void viragbelso(double meret, Color szin)
+        {
+             Fordulj(90);
+            nemfogyatékosív(90, meret, "Jobbra");
+            defaultkaresz.Előre(4*meret);
+            Fordulj(5);
+            defaultkaresz.Előre(meret/8);
+            Fordulj(5);
+            defaultkaresz.Előre(meret/8);
+            Fordulj(7);
+            defaultkaresz.Előre(meret/8);
+            Fordulj(10);
+            for (int i = 0; i < 3; i++)
+            {
+                defaultkaresz.Előre(meret/8);
+                Fordulj(10);
+		    }
+            Fordulj(-120);
+            for (int i = 0; i < 2; i++)
+	        {
+                defaultkaresz.Előre(meret/9);
+                Fordulj(-5);
+		    }
+            for (int i = 0; i < 13; i++)
+		    {
+                defaultkaresz.Előre(meret/9);
+                Fordulj(-11);
+		    }
+            Fordulj(84);
+            for (int i = 0; i < 5; i++)
+			{
+                nemfogyatékosív(100, meret/2, "Jobbra");   
+                Fordulj(100);
+			}
+        }
     }   
 }

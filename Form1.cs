@@ -10,8 +10,14 @@ namespace LogoKaresz
 		
 		void FELADAT()
 		{
-			Előre(100);
-			virágszár(100, Color.Black);
+
+			Bezier(10, 0, 40, 20, 100);
+			Bezier(40, 0, 40, -10, 100);
+
+
+
+
+
 		}
 	}
 }

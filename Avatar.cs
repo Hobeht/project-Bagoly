@@ -262,20 +262,20 @@ namespace LogoKaresz
 		}
 
 		public void Ív(double fok, double r, bool frissít_e = false)
-		{
-			using (new Form1.Frissítés(this, frissít_e))
-			{
-				double a = 2 * r * Math.Tan(Math.PI / 360);
-				Előre(a / 2);
-				for (int i = 0; i < fok - 1; i++)
-				{
-					Jobbra(1);
-					Előre(a);
-				}
-				Jobbra(1);
-				Előre(a / 2);
-			}
-		}
+        {
+            using (new Form1.Frissítés(this, frissít_e))
+            {
+                double a = 2 * r * Math.Tan(Math.PI / 360);
+                Előre(a / 2);
+                for (int i = 0; i < fok - 1; i++)
+                {
+                    Jobbra(1);
+                    Előre(a);
+                }
+                Jobbra(1);
+                Előre(a / 2);
+            }
+        }
 
 		void Kontrolpont(Pont p, Color szin, float w = 10, float h = 10)
 		{

@@ -14,7 +14,6 @@ namespace LogoKaresz
 		void FELADAT()
 		{
 			viragkulso(50, Color.Red);
-			
 		}
 	}
 }

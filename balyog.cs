@@ -155,17 +155,17 @@ namespace LogoKaresz
 		    }
             Fordulj(120);
             for (int i = 0; i < 3; i++)
-		    }
+			{
                 defaultkaresz.Előre(meret/8);
                 Fordulj(10);
-		    }
+			}
             defaultkaresz.Előre(meret/8);
             Fordulj(12);
             for (int i = 0; i < 5; i++)
-		    {
+			{
                 defaultkaresz.Előre(meret/8);
                 Fordulj(15);
-		    }
+			}
             defaultkaresz.Előre(meret/2.77);
             defaultkaresz.Előre(meret*4);
             nemfogyatékosív(90, meret/2.5, "Jobbra");

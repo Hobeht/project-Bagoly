@@ -10,10 +10,14 @@ namespace LogoKaresz
 		
 		void FELADAT()
 		{
+			Tollat(fel);
+			Előre(150);
+			Tollat(le);
 
-			Bezier(10, 0, 40, 20, 100);
-			Bezier(40, 0, 40, -10, 100);
+			using(new Frissítés(false)) {
+				tollak(100, Color.Brown, true, "Jobb");
 
+			}
 
 
 

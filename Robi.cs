@@ -186,7 +186,7 @@ namespace LogoKaresz
 		}
 		#endregion
 		#region toll
-		void tollak(int méret, Color szín, bool féltoll)
+		void tollak(int méret, Color szín, bool féltoll,string féltolltipus)
 		{
 			if (féltoll == false)
 			{
@@ -207,10 +207,12 @@ namespace LogoKaresz
 				Tollat(le);
 
 			}
-			else
+			if(féltoll==true&&féltolltipus=="Bal")
 			{
 				Ív(90, méret);
+				//Tollat(fel); VÉGLEGES BAGOLYHOZ
 				Hátra(méret);
+				//Tollat(le);
 				Balra(90);
 				Hátra(méret);
 				Előre(méret / 2);
@@ -227,19 +229,39 @@ namespace LogoKaresz
 
 
 			}
+            if (féltoll == true && féltolltipus == "Jobb")
+            {
+				nemfogyatékosív(90, méret, "Balra");
+				//Tollat(fel);CSAK A VÉGLEGES BAGOLYHOZ
+				Hátra(méret);
+				//Tollat(le);
+				Balra(-90);
+				Hátra(méret);
+				Előre(méret / 2);
+				Jobbra(-90);
+				Tollat(fel);
+				Előre(méret / 8);
+				Tollat(le);
+				Tölt(szín);
+				Tollat(fel);
+				Hátra(méret / 8);
+				Balra(-90);
+				Hátra(méret / 2);
+				Tollat(le);
+			}
 
 		}
 		#endregion
 		#region tollsor
 		void tollsor(int hossz, int méret, Color szín)
 		{
-			tollak(méret, szín, true);
+			tollak(méret, szín, true,"Bal");
 			for (int i = 0; i < hossz-2; i++)
 			{
-				tollak(méret, szín, false);
+				tollak(méret, szín, false,"Jobb");
 				oldalra(méret * 2,false);
 			}
-			tollak(méret, szín, true);
+			tollak(méret, szín, true,"Jobb");
 
 		}
 		#endregion
@@ -280,7 +302,7 @@ namespace LogoKaresz
 			{
 				keretdarab(méret, szín, körszín, true);
 				Tollat(fel);
-				Hátra(méret * 1.75);
+				Hátra(méret * 1.695);
 
 				Tollat(le);
 
@@ -291,16 +313,11 @@ namespace LogoKaresz
 				keretdarab(méret, szín, körszín, true);
 				Tollat(fel);
 				Jobbra(-90);
-				Előre(méret * 1.5);
+				Előre(méret * 1.52);
 				Balra(-90);
 				Tollat(le);
 			}
-			Tollat(fel);
-			Előre(méret / 5);
-			Jobbra(90);
-			Előre(méret / 20);
-			Balra(90);
-			Tollat(le);
+			
 			
 			keretdarab(méret, szín, körszín, true);
 		}
@@ -349,8 +366,33 @@ namespace LogoKaresz
 		}
 		void bagoly(int méret)
         {
-			Bezier(10, 0, 40, 20, méret);
+			Jobbra(90);
+			Előre(méret / 16);
+			Balra(90);
+			Hátra(méret);
+			oldalra(méret / 8, true);
+			nemfogyatékosív(90, méret/2, "Jobbra");
+			Balra(90);
+			Tollat(fel);
+			Hátra(méret/2);
+			oldalra(-méret/2, false);
+
+			Tollat(le);
+			láb(méret/2, Color.Black);
+			Tollat(fel);
+
+			oldalra(méret/2, false);
+			Hátra(-méret/2);
+			Tollat(le);
+
+			Bezier(10, 0, 40, 20, méret*1.5);
+
+			nemfogyatékosív(30, méret * 6, "Balra");
+			nemfogyatékosív(45, méret, "Balra");
+			Jobbra(75);
 			
+			
+
 		}
 	}
 }

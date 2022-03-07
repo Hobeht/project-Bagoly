@@ -13,17 +13,19 @@ namespace LogoKaresz
     {
         void nemfogyatékosív(double szög, double méret, string merre)
         {
-
-            for (int i = 0; i < szög; i++)
-            {
-                defaultkaresz.Előre(2 * méret * Math.Tan(Math.PI / 360));
-                if (merre == "Balra")
+            using(new Frissítés(false))
+            { 
+                for (int i = 0; i < szög; i++)
                 {
-                    Balra(1);
-                }
-                else
-                {
-                    Jobbra(1);
+                    defaultkaresz.Előre(2 * méret * Math.Tan(Math.PI / 360));
+                    if (merre == "Balra")
+                    {
+                        Balra(1);
+                    }
+                    else
+                    {
+                        Jobbra(1);
+                    }
                 }
             }
         }
@@ -179,8 +181,8 @@ namespace LogoKaresz
         }
         void viragbelso(double meret, Color szin)
         {
-             Fordulj(90);
-            nemfogyatékosív(90, meret, "Jobbra");
+            Fordulj(90);
+            nemfogyatékosív(90, meret/1.5, "Jobbra");
             defaultkaresz.Előre(4*meret);
             Fordulj(5);
             defaultkaresz.Előre(meret/8);
@@ -206,11 +208,61 @@ namespace LogoKaresz
                 Fordulj(-11);
 		    }
             Fordulj(84);
-            for (int i = 0; i < 5; i++)
+            for (int i = 0; i < 4; i++)
 			{
                 nemfogyatékosív(100, meret/2, "Jobbra");   
                 Fordulj(100);
 			}
+            nemfogyatékosív(70, meret/1.7, "Jobbra");   
+            nemfogyatékosív(22, meret*1.2, "Balra");   
+            nemfogyatékosív(180, meret/10, "Balra");   
+            nemfogyatékosív(22, meret*1.2, "Jobbra");   
+            nemfogyatékosív(70, meret/1.7, "Balra");   
+            for (int i = 0; i < 4; i++)
+			{
+                Fordulj(-100);
+                nemfogyatékosív(100, meret/2, "Balra");   
+			}
+            Fordulj(-84);
+            for (int i = 0; i < 6; i++)
+		    {
+                Fordulj(11);
+                defaultkaresz.Előre(meret/9);
+		    }
+            Fordulj(-60);
+            for (int i = 0; i < 7; i++)
+		    { 
+               Fordulj(-11);
+               defaultkaresz.Előre(meret/9);
+		    }
+            for (int i = 0; i < 2; i++)
+	        {
+               Fordulj(-5);
+               defaultkaresz.Előre(meret/9);
+	        }
+            Fordulj(-120);
+            for (int i = 0; i < 3; i++)
+            {
+                defaultkaresz.Előre(meret/8);
+                Fordulj(10);
+		    }
+            Fordulj(10);
+            defaultkaresz.Előre(meret/8);
+            Fordulj(7);
+            defaultkaresz.Előre(meret/8);
+            Fordulj(5);
+            defaultkaresz.Előre(meret/8);
+            Fordulj(5);
+            defaultkaresz.Előre(4*meret);
+            nemfogyatékosív(93, meret/1.45, "Jobbra");
+            Tollat(fel);
+            Fordulj(42);
+            defaultkaresz.Előre(meret/2);
+            Tölt(szin)
+            Hátra(meret/2);
+            Fordulj(45);
+            Tollat(le);
+            
         }
     }   
 }

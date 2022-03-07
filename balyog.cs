@@ -33,26 +33,26 @@ namespace LogoKaresz
         {
             if (irany)
 	        {
-			Bezier(70, 90, 60, 25, 150);
-			Fordulj(90);
-            Bezier(60, 180, 30, -90, 120);
-            Fordulj(-20);
-            defaultkaresz.Előre(meret/4);
-            for (int i = 0; i < 4; i++)
-			{
-                Fordulj(5);
+			    Bezier(70, 90, 60, 25, 150);
+			    Fordulj(90);
+                Bezier(60, 180, 30, -90, 120);
+                Fordulj(-20);
                 defaultkaresz.Előre(meret/4);
-			}
-            defaultkaresz.Előre(meret/7);
-            Fordulj(90);
-            defaultkaresz.Előre(meret/1.265);
-            Tollat(fel);
-            Fordulj(135);
-            defaultkaresz.Előre(meret/4);
-            Tölt(szin);
-            defaultkaresz.Hátra(meret/4);
-            Fordulj(-45);
-            Tollat(le);
+                for (int i = 0; i < 4; i++)
+			    {
+                    Fordulj(5);
+                    defaultkaresz.Előre(meret/4);
+			    }
+                defaultkaresz.Előre(meret/7);
+                Fordulj(90);
+                defaultkaresz.Előre(meret/1.265);
+                Tollat(fel);
+                Fordulj(135);
+                defaultkaresz.Előre(meret/4);
+                Tölt(szin);
+                defaultkaresz.Hátra(meret/4);
+                Fordulj(-45);
+                Tollat(le);
 	        }
             else
 	        {
@@ -319,6 +319,27 @@ namespace LogoKaresz
             Fordulj(-90);
             Tollat(le);
             viragtetoresz(meret, sziromszin, false);
+        }
+        void viragszar(double meret, Color szin)
+        { 
+            defaultkaresz.Előre(meret*3);
+            nemfogyatékosív(180, meret/4, "Balra");
+            defaultkaresz.Előre(meret*3);
+            Fordulj(90);
+            defaultkaresz.Előre(meret/2);
+            Tollat(fel);
+            Fordulj(105);
+            defaultkaresz.Előre(meret);
+            Tölt(szin);
+            defaultkaresz.Hátra(meret);
+            Fordulj(75);
+            defaultkaresz.Előre(meret/4);
+            Fordulj(-90);
+            Tollat(le);
+        }
+        void egeszvirag(double meret, Color levelszin, Color szarszin, Color holyagszin, Color kulsoszirom, Color belsoszirom, Color tetoszirom, Color körszin)
+        { 
+            
         }
     }   
 }

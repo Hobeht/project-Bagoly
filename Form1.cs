@@ -13,7 +13,9 @@ namespace LogoKaresz
 		/* Függvények vége */
 		void FELADAT()
 		{
-			viragszar(100, Color.Red);
+			nagyviragresz(50, Color.Red, Color.Red);
+			//levél(50, Color.Red, false);
+			//egeszvirag(50, Color.Green, Color.SandyBrown, Color.SandyBrown, Color.SandyBrown, Color.SandyBrown, Color.SandyBrown, Color.SandyBrown);
 		}
 	}
 }

@@ -256,11 +256,11 @@ namespace LogoKaresz
             defaultkaresz.Előre(4*meret);
             nemfogyatékosív(93, meret/1.45, "Jobbra");
             Tollat(fel);
-            Fordulj(42);
+            Fordulj(-42);
             defaultkaresz.Előre(meret/2);
-            Tölt(szin)
-            Hátra(meret/2);
-            Fordulj(45);
+            Tölt(szin);
+            defaultkaresz.Hátra(meret/2);
+            Fordulj(-45);
             Tollat(le);
             
         }

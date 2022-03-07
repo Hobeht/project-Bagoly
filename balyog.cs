@@ -262,7 +262,41 @@ namespace LogoKaresz
             defaultkaresz.Hátra(meret/2);
             Fordulj(-45);
             Tollat(le);
-            
+        }
+        void viragtetoresz(double meret, Color szin, bool irany)
+        {
+            if (irany)
+	        {       
+                defaultkaresz.Előre(meret);
+                nemfogyatékosív(90, meret, "Jobbra");
+                Fordulj(140);
+                nemfogyatékosív(130, meret*1.8, "Balra");
+                defaultkaresz.Előre(meret/1.51);
+                nemfogyatékosív(180, meret/1.005, "Balra");
+                Tollat(fel);
+                Fordulj(45);
+                defaultkaresz.Előre(meret);
+                Tölt(szin);
+                defaultkaresz.Hátra(meret);
+                Fordulj(-45);
+                Tollat(le);
+	        }
+            else
+            { 
+                defaultkaresz.Előre(meret);
+                nemfogyatékosív(90, meret, "Balra");
+                Fordulj(-140);
+                nemfogyatékosív(130, meret*1.8, "Jobbra");
+                defaultkaresz.Előre(meret/1.51);
+                nemfogyatékosív(180, meret/1.005, "Jobbra");
+                Tollat(fel);
+                Fordulj(-45);
+                defaultkaresz.Előre(meret);
+                Tölt(szin);
+                defaultkaresz.Hátra(meret);
+                Fordulj(45);
+                Tollat(le);
+            }
         }
     }   
 }

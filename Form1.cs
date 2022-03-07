@@ -13,7 +13,7 @@ namespace LogoKaresz
 		/* Függvények vége */
 		void FELADAT()
 		{
-			viragtetoresz(50, Color.Red, false);
+			kompletteto(100, Color.Red, Color.Black);
 		}
 	}
 }

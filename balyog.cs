@@ -298,5 +298,27 @@ namespace LogoKaresz
                 Tollat(le);
             }
         }
+        void kompletteto(double meret, Color sziromszin, Color körszin)
+        { 
+            viragtetoresz(meret, sziromszin, true);
+            Tollat(fel);
+            Fordulj(90);
+            defaultkaresz.Előre(meret*2.25);
+            Fordulj(-90);
+            defaultkaresz.Előre(meret*2);
+            Fordulj(-90);
+            Tollat(le);
+            nemfogyatékosív(360, meret, "Balra");
+            Tollat(fel);
+            Fordulj(90);
+            defaultkaresz.Előre(meret);
+            Tölt(körszin);
+            defaultkaresz.Hátra(meret*3);
+            Fordulj(90);
+            defaultkaresz.Előre(meret*2.25);
+            Fordulj(-90);
+            Tollat(le);
+            viragtetoresz(meret, sziromszin, false);
+        }
     }   
 }

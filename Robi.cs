@@ -203,7 +203,7 @@ namespace LogoKaresz
 				Tollat(fel);
 				Hátra(méret / 5);
 				Balra(90);
-				Hátra(méret);
+			Előre(méret);
 				Tollat(le);
 
 			}
@@ -215,16 +215,16 @@ namespace LogoKaresz
 				//Tollat(le);
 				Balra(90);
 				Hátra(méret);
-				Előre(méret / 2);
+				Előre(méret / 1.5);
 				Jobbra(90);
 				Tollat(fel);
-				Előre(méret / 8);
+				Előre(méret / 10);
 				Tollat(le);
 				Tölt(szín);
 				Tollat(fel);
-				Hátra(méret / 8);
+				Hátra(méret / 10);
 				Balra(90);
-				Hátra(méret / 2);
+				Hátra(méret / 1.5);
 				Tollat(le);
 
 
@@ -237,31 +237,33 @@ namespace LogoKaresz
 				//Tollat(le);
 				Balra(-90);
 				Hátra(méret);
-				Előre(méret / 2);
+				Előre(méret / 1.5);
 				Jobbra(-90);
 				Tollat(fel);
-				Előre(méret / 8);
+				Előre(méret / 10);
 				Tollat(le);
 				Tölt(szín);
 				Tollat(fel);
-				Hátra(méret / 8);
+				Hátra(méret / 10);
 				Balra(-90);
-				Hátra(méret / 2);
+				Hátra(méret / 1.5);
 				Tollat(le);
 			}
 
 		}
+
 		#endregion
 		#region tollsor
 		void tollsor(int hossz, int méret, Color szín)
 		{
-			tollak(méret, szín, true,"Bal");
+			tollak(méret, szín, true,"Jobb");
+			Jobbra(180);
 			for (int i = 0; i < hossz-2; i++)
 			{
 				tollak(méret, szín, false,"Jobb");
-				oldalra(méret * 2,false);
+				
 			}
-			tollak(méret, szín, true,"Jobb");
+			tollak(méret, szín, true,"Bal");
 
 		}
 		#endregion

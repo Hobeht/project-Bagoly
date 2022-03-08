@@ -13,10 +13,10 @@ namespace LogoKaresz
 			Tollat(fel);
 			Előre(150);
 			Tollat(le);
-
+			Jobbra(90);
 			using(new Frissítés(false)) {
-				tollak(100, Color.Brown, true, "Jobb");
-
+				tollsor(5, 20, Color.Brown);
+				
 			}
 
 

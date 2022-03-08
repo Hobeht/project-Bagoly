@@ -81,6 +81,7 @@ namespace LogoKaresz
 	        }
         }
         void félkör(double meret, Color szin) 
+
         { 
             defaultkaresz.Előre(meret);
             Fordulj(-90);
@@ -300,6 +301,9 @@ namespace LogoKaresz
         }
         void kompletteto(double meret, Color sziromszin, Color körszin)
         { 
+            Fordulj(-90);
+            defaultkaresz.Előre(meret * 2.25);
+            Fordulj(90);
             viragtetoresz(meret, sziromszin, true);
             Tollat(fel);
             Fordulj(90);
@@ -375,7 +379,7 @@ namespace LogoKaresz
             Fordulj(90);
             defaultkaresz.Előre(meret*2.2);
             Tollat(le);
-            viragkulso(meret, kulsoszirom);
+            nagyviragresz(meret, kulsoszirom, belsoszirom);
         }
     }   
 }

@@ -80,24 +80,40 @@ namespace LogoKaresz
                 Tollat(le);
 	        }
         }
-        void félkör(double meret, Color szin) 
-        { 
-            defaultkaresz.Előre(meret);
-            Fordulj(-90);
-            defaultkaresz.Ív(180, meret / 2);
-            Tollat(fel);
-            Fordulj(-135);
-            defaultkaresz.Előre(meret/2);
-            Tölt(szin);
-            defaultkaresz.Hátra(meret/2);
-            Fordulj(45);
-            Tollat(le);
+        void félkör(double meret, bool irany, Color szin) 
+        {
+            if (irany)
+            {
+                defaultkaresz.Előre(meret);
+                Fordulj(-90);
+                nemfogyatékosív(180, meret / 2, "Jobbra");
+                Tollat(fel);
+                Fordulj(-135);
+                defaultkaresz.Előre(meret/2);
+                Tölt(szin);
+                defaultkaresz.Hátra(meret/2);
+                Fordulj(45);
+                Tollat(le);
+            }
+            else
+            {
+                defaultkaresz.Előre(meret);
+                Fordulj(90);
+                nemfogyatékosív(180, meret / 2, "Balra");
+                Tollat(fel);
+                Fordulj(135);
+                defaultkaresz.Előre(meret / 2);
+                Tölt(szin);
+                defaultkaresz.Hátra(meret / 2);
+                Fordulj(-45);
+                Tollat(le);
+            }
         }
-        void viragszel(double meret, int felkörszam, double összfordulas, Color szin)
+        void viragszel(double meret, int felkörszam, double összfordulas, bool irany, Color szin)
         {
             for (int i = 0; i < felkörszam; i++)
 			{
-                félkör(meret, szin);
+                félkör(meret, irany, szin);
                 defaultkaresz.Előre(meret);
                 Fordulj(összfordulas/felkörszam);
 			}
@@ -299,10 +315,12 @@ namespace LogoKaresz
             }
         }
         void kompletteto(double meret, Color sziromszin, Color körszin)
-        { 
+        {
+            Tollat(fel);
             Fordulj(-90);
             defaultkaresz.Előre(meret * 2.25);
             Fordulj(90);
+            Tollat(le);
             viragtetoresz(meret, sziromszin, true);
             Tollat(fel);
             Fordulj(90);
@@ -344,7 +362,7 @@ namespace LogoKaresz
             Tollat(le);
         }
         void nagyviragresz(double meret, Color kulsoszirom, Color belsoszirom, Color holyagszin)
-        { 
+        {
             viragkulso(meret, kulsoszirom);
             Tollat(fel);
             defaultkaresz.Előre(meret/4);
@@ -357,16 +375,47 @@ namespace LogoKaresz
             defaultkaresz.Hátra(meret/1.6666);
             Tollat(le);
             Fordulj(90);
+            Tollat(fel);
             nemfogyatékosív(90, meret, "Jobbra");
-            defaultkaresz.Előre(meret*2);
+            defaultkaresz.Előre(meret/3.3);
+            Tollat(le);
+            viragszel(meret/2.4, 4, 0, false, holyagszin);
+            Hátra((meret/2.4)*4);
             Fordulj(180);
-            viragszel(meret/2.7, 5, 0, holyagszin);
-            for (int i = 0; i < 7; i++)
-            {
-                félkör(meret/2.7, holyagszin);
-                defaultkaresz.Előre(meret / 2.7);
-                Fordulj(20);
-            }
+            félkör(meret/2.4, true, holyagszin);
+            defaultkaresz.Előre(meret / 2.4);
+            Fordulj(15);
+            félkör(meret/2.4, true, holyagszin);
+            defaultkaresz.Előre(meret / 2.4);
+            Fordulj(30);
+            félkör(meret/2.4, true, holyagszin);
+            defaultkaresz.Előre(meret / 2.4);
+            Fordulj(30);
+            félkör(meret/2.4, true, holyagszin);
+            defaultkaresz.Előre(meret / 2.4);
+            Fordulj(15);
+            félkör(meret/2.4, true, holyagszin);
+            defaultkaresz.Előre(meret / 2.4);
+            Fordulj(15);
+            félkör(meret / 2.4, true, holyagszin);
+            defaultkaresz.Előre(meret / 2.4);
+            Fordulj(30);
+            félkör(meret / 2.4, true, holyagszin);
+            defaultkaresz.Előre(meret / 2.4);
+            Fordulj(30);
+            félkör(meret / 2.4, true, holyagszin);
+            defaultkaresz.Előre(meret / 2.4);
+            Fordulj(15);
+            félkör(meret / 2.4, true, holyagszin);
+            defaultkaresz.Előre(meret / 2.4);
+            viragszel(meret/2.4, 4, 0, true, holyagszin);
+            Hátra((meret/2.4)*4);
+            Fordulj(180);
+            defaultkaresz.Előre(meret/3.3);
+            Tollat(fel);
+            nemfogyatékosív(90, meret, "Jobbra");
+            Fordulj(-90);
+            Tollat(le);
         }
         void egeszvirag(double meret, Color levelszin, Color szarszin, Color holyagszin, Color kulsoszirom, Color belsoszirom, Color tetoszirom, Color körszin)
         { 
@@ -390,6 +439,10 @@ namespace LogoKaresz
             defaultkaresz.Előre(meret*2.2);
             Tollat(le);
             nagyviragresz(meret, kulsoszirom, belsoszirom, holyagszin);
+            Tollat(fel);
+            defaultkaresz.Előre(meret*5.3);
+            Tollat(le);
+            kompletteto(meret/3.5, tetoszirom, körszin);
         }
     }   
 }

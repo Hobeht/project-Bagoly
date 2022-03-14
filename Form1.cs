@@ -11,11 +11,11 @@ namespace LogoKaresz
 		void FELADAT()
 		{
 			Tollat(fel);
-			Előre(150);
+			Előre(50);
 			Tollat(le);
-			Jobbra(90);
+			Jobbra(0);
 			using(new Frissítés(false)) {
-				tollsor(5, 20, Color.Brown);
+				bagoly(50);
 				
 			}
 

@@ -264,7 +264,8 @@ namespace LogoKaresz
 				
 			}
 			tollak(méret, szín, true,"Bal");
-
+			Előre(méret);
+			Jobbra(90);
 		}
 		#endregion
 		#region szár
@@ -389,9 +390,16 @@ namespace LogoKaresz
 
 			Bezier(10, 0, 40, 20, méret*1.5);
 
-			nemfogyatékosív(30, méret * 6, "Balra");
-			nemfogyatékosív(45, méret, "Balra");
-			Jobbra(75);
+			nemfogyatékosív(15, méret * 8, "Balra");
+			nemfogyatékosív(40, méret, "Balra");
+			Jobbra(55);
+			Tollat(fel);
+			Hátra(méret * 3.62);
+			Balra(90);
+			Előre(méret/2);
+			Jobbra(90);
+			
+			Tollat(le);
 			
 			
 

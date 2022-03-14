@@ -417,9 +417,11 @@ namespace LogoKaresz
 			nemfogyatékosív(90, méret/2, "Jobbra");
 			Balra(90);
 			Tollat(le);
-			
-			
-			
+			Bezier(10, 0, 40, -20, méret * 1.5);
+			nemfogyatékosív(15, méret * 8, "Jobbra");
+			nemfogyatékosív(40, méret, "Jobbra");
+			Balra(55);
+
 
 
 		}

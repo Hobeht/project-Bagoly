@@ -14,10 +14,10 @@ namespace LogoKaresz
 			Előre(50);
 			Tollat(le);
 			Jobbra(0);
-			using(new Frissítés(false)) {
+			
 				bagoly(50);
 				
-			}
+			
 
 
 

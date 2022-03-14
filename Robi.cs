@@ -400,8 +400,27 @@ namespace LogoKaresz
 			Jobbra(90);
 			
 			Tollat(le);
+			Jobbra(-90);
+			Előre(méret / 16);
+			Balra(-90);
+			Hátra(méret);
+			oldalra(-méret / 8, true);
+			nemfogyatékosív(90, méret / 2, "Balra");
+			Balra(-90);
+			Tollat(fel);
+			Hátra(méret / 2);
+			oldalra(méret / 2, false);
+			oldalra(-méret, false);
+			Tollat(le);
+			láb(méret / 2, Color.Black);
+			Tollat(fel);
+			nemfogyatékosív(90, méret/2, "Jobbra");
+			Balra(90);
+			Tollat(le);
 			
 			
+			
+
 
 		}
 	}

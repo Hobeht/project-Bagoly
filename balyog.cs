@@ -444,5 +444,21 @@ namespace LogoKaresz
             Tollat(le);
             kompletteto(meret/3.5, tetoszirom, körszin);
         }
+        void szem(double meret, Color körszin, Color körkörüliszin, Color körkörülikörüliszin, Color körkörülikörülikörüliszin)
+        { 
+            Fordulj(-90);
+            nemfogyatékosív(180, meret, "Balra");
+            Fordulj(-90);
+            /*
+            Tollat(fel);
+            defaultkaresz.Hátra(meret*2.15);
+            Tollat(le);
+            Fordulj(-90);
+            nemfogyatékosív(50, meret*1.7, "Balra");
+            nemfogyatékosív(90, meret*1.4, "Balra");
+            nemfogyatékosív(60, meret, "Balra");
+             */
+            
+        }
     }   
 }

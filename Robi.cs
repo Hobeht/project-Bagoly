@@ -390,13 +390,14 @@ namespace LogoKaresz
 
 			Bezier(10, 0, 40, 20, méret*1.5);
 
-			nemfogyatékosív(15, méret * 8, "Balra");
+			nemfogyatékosív(10, méret * 9, "Balra");
 			nemfogyatékosív(40, méret, "Balra");
-			Jobbra(55);
+			
+			Jobbra(50);
 			Tollat(fel);
-			Hátra(méret * 3.62);
+			Hátra(méret * 3.14);
 			Balra(90);
-			Előre(méret/2);
+			Előre(méret/1.5);
 			Jobbra(90);
 			
 			Tollat(le);
@@ -418,16 +419,24 @@ namespace LogoKaresz
 			Balra(90);
 			Tollat(le);
 			Bezier(10, 0, 40, -20, méret * 1.5);
-			nemfogyatékosív(15, méret * 8, "Jobbra");
+			nemfogyatékosív(10, méret * 9, "Jobbra");
 			nemfogyatékosív(40, méret, "Jobbra");
-			Balra(55);
 
+			Balra(50);
+			Jobbra(90);
+			Tollat(fel);
+			Előre(méret*1.37);
+			Tollat(le);
+			Balra(90);
+			Jobbra(78);
+			fül(méret/5.35);
+			Balra(103);
 
 
 		}
-		void fül(int méret)
+		void fül(double méret)
         {
-			nemfogyatékosív(80, méret / 2, "Jobbra");
+			nemfogyatékosív(80, méret , "Jobbra");
 			Balra(90);
 			nemfogyatékosív(70, méret / 2.5, "Balra");
 			Jobbra(90);
@@ -439,11 +448,27 @@ namespace LogoKaresz
 			nemfogyatékosív(80, méret / 1.5, "Jobbra");
 			nemfogyatékosív(160, méret / 5, "Balra");
 			nemfogyatékosív(60, méret , "Balra");
-			nemfogyatékosív(50, méret *3, "Balra");
+			nemfogyatékosív(50, méret *5, "Balra");
 			nemfogyatékosív(40, méret * 5, "Balra");
 			nemfogyatékosív(50, méret, "Balra");
 			Jobbra(155);
+			nemfogyatékosív(50, méret, "Balra");
+			nemfogyatékosív(40, méret * 5, "Balra");
+			nemfogyatékosív(50, méret * 5, "Balra");
+			nemfogyatékosív(60, méret, "Balra");
+			nemfogyatékosív(160, méret / 5, "Balra");
 			
+			nemfogyatékosív(80, méret / 1.5, "Jobbra");
+			Jobbra(90);
+			nemfogyatékosív(70, méret / 1.5, "Balra");
+			Balra(90);
+			nemfogyatékosív(95, méret / 1.5, "Jobbra");
+			Jobbra(90);
+			nemfogyatékosív(70, méret / 2.5, "Balra");
+			Balra(90);
+			nemfogyatékosív(80, méret , "Jobbra");
+
+
 		}
 	}
 }

@@ -13,12 +13,13 @@ namespace LogoKaresz
 			Tollat(fel);
 			Előre(100);
 			Tollat(le);
-			Jobbra(0);
-			Jobbra(90);
+			
+			
+			
 			using(new Frissítés(false))
             {
 
-			fül(50);
+				bagoly(40);
             }
 				
 			

@@ -267,6 +267,10 @@ namespace LogoKaresz
 			Előre(méret);
 			Jobbra(90);
 		}
+		void tollmozaik(double méret,double csökkenés_mértéke)
+        {
+
+        }
 		#endregion
 		#region szár
 		void virágszár(int méret, Color szín)

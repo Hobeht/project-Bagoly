@@ -425,5 +425,25 @@ namespace LogoKaresz
 
 
 		}
+		void fül(int méret)
+        {
+			nemfogyatékosív(80, méret / 2, "Jobbra");
+			Balra(90);
+			nemfogyatékosív(70, méret / 2.5, "Balra");
+			Jobbra(90);
+
+			nemfogyatékosív(95, méret/1.5 , "Jobbra");
+			Balra(90);
+			nemfogyatékosív(70, méret / 1.5, "Balra");
+			Jobbra(90);
+			nemfogyatékosív(80, méret / 1.5, "Jobbra");
+			nemfogyatékosív(160, méret / 5, "Balra");
+			nemfogyatékosív(60, méret , "Balra");
+			nemfogyatékosív(50, méret *3, "Balra");
+			nemfogyatékosív(40, méret * 5, "Balra");
+			nemfogyatékosív(50, méret, "Balra");
+			Jobbra(155);
+			
+		}
 	}
 }

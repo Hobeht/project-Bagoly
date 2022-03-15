@@ -11,11 +11,15 @@ namespace LogoKaresz
 		void FELADAT()
 		{
 			Tollat(fel);
-			Előre(50);
+			Előre(100);
 			Tollat(le);
 			Jobbra(0);
-			
-				bagoly(50);
+			Jobbra(90);
+			using(new Frissítés(false))
+            {
+
+			fül(50);
+            }
 				
 			
 

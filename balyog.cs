@@ -449,16 +449,13 @@ namespace LogoKaresz
             Fordulj(-90);
             nemfogyatékosív(180, meret, "Balra");
             Fordulj(-90);
-            /*
             Tollat(fel);
             defaultkaresz.Hátra(meret*2.15);
             Tollat(le);
             Fordulj(-90);
-            nemfogyatékosív(50, meret*1.7, "Balra");
-            nemfogyatékosív(90, meret*1.4, "Balra");
-            nemfogyatékosív(60, meret, "Balra");
-             */
-            
+            nemfogyatékosív(90, meret*1.3, "Balra");
+            nemfogyatékosív(45, meret*1.5, "Balra");
+            nemfogyatékosív(45, meret*1.3, "Balra");
         }
     }   
 }

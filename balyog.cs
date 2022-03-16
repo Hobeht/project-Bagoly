@@ -448,6 +448,8 @@ namespace LogoKaresz
         { 
             Fordulj(-90);
             nemfogyatékosív(180, meret, "Balra");
+            defaultkaresz.Előre(meret*0.1);
+            defaultkaresz.Hátra(meret*0.1);
             Fordulj(-90);
             Tollat(fel);
             defaultkaresz.Hátra(meret*2.15);
@@ -483,6 +485,55 @@ namespace LogoKaresz
             Tollat(fel);
             defaultkaresz.Hátra(meret/0.231481);
             Tollat(le);
+            Fordulj(90);
+            nemfogyatékosív(180, meret, "Jobbra");
+            Fordulj(90);
+            Tollat(fel);
+            defaultkaresz.Hátra(meret*2.15);
+            Tollat(le);
+            Fordulj(90);
+            defaultkaresz.Hátra(meret*0.1);
+            defaultkaresz.Előre(meret*0.1);
+            nemfogyatékosív(100, meret*1.4, "Jobbra");
+            nemfogyatékosív(45, meret*1.45, "Jobbra");
+            nemfogyatékosív(62, meret*0.8, "Jobbra");
+            Fordulj(117);
+            Tollat(fel);
+            defaultkaresz.Hátra(meret*2.8);
+            Tollat(le);
+            Fordulj(90);
+            nemfogyatékosív(100, (meret*1.4)*1.5, "Jobbra");
+            nemfogyatékosív(45, (meret*1.45)*1.5, "Jobbra");
+            nemfogyatékosív(60, (meret*0.8)*1.5, "Jobbra");
+            Fordulj(115);
+            Tollat(fel);
+            defaultkaresz.Hátra(meret*4.3);
+            Tollat(le);
+            Fordulj(90);
+            nemfogyatékosív(35, meret*2.4, "Jobbra");
+            nemfogyatékosív(30, meret/2, "Jobbra");
+            Fordulj(84);
+            nemfogyatékosív(150, meret/1.6, "Jobbra");
+            Fordulj(120);
+            nemfogyatékosív(150, meret/1.4, "Jobbra");
+            Fordulj(115);
+            nemfogyatékosív(150, meret/1.2, "Jobbra");
+            Fordulj(115);
+            nemfogyatékosív(158, meret/1.2, "Jobbra");
+            Fordulj(149);
+            Tollat(fel);
+            defaultkaresz.Hátra(meret/3.125);
+            Tölt(körkörülikörülikörüliszin);
+            defaultkaresz.Hátra(meret/1.08695);
+            Tölt(körkörülikörüliszin);
+            defaultkaresz.Hátra(meret/1.2195);
+            Tölt(körkörüliszin);
+            defaultkaresz.Hátra(meret/0.9433);
+            Tölt(körszin);
+            defaultkaresz.Hátra(meret/0.8333);
+            Tollat(le);
+            /*
+             */
         }
     }   
 }

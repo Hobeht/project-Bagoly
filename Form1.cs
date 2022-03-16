@@ -13,8 +13,7 @@ namespace LogoKaresz
 		/* Függvények vége */
 		void FELADAT()
 		{
-			Fordulj(-45);
-			szem(50, Color.WhiteSmoke, Color.Black, Color.SandyBrown, Color.ForestGreen);
+			szemorr(50, Color.WhiteSmoke, Color.Black, Color.SandyBrown, Color.ForestGreen, Color.Black);
 		}
 	}
 }

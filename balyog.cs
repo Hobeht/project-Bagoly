@@ -446,6 +446,9 @@ namespace LogoKaresz
         }
         void szem(double meret, Color körszin, Color körkörüliszin, Color körkörülikörüliszin, Color körkörülikörülikörüliszin)
         { 
+            Tollat(fel);
+            defaultkaresz.Előre(meret/1.56739);
+            Tollat(le);
             Fordulj(-90);
             nemfogyatékosív(180, meret, "Balra");
             defaultkaresz.Előre(meret*0.1);
@@ -531,9 +534,42 @@ namespace LogoKaresz
             defaultkaresz.Hátra(meret/0.9433);
             Tölt(körszin);
             defaultkaresz.Hátra(meret/0.8333);
+            defaultkaresz.Hátra(meret/1.56739);
             Tollat(le);
-            /*
-             */
+        }
+        void orr(double meret, Color szin)
+        { 
+            defaultkaresz.Előre(meret);
+            Fordulj(-90);
+            defaultkaresz.Előre(meret);
+            Fordulj(-90);
+            defaultkaresz.Előre(meret/5);
+            Fordulj(-90);
+            defaultkaresz.Előre((meret/5)*4);
+            Fordulj(90);
+            defaultkaresz.Előre((meret/5)*4);
+            Fordulj(-90);
+            defaultkaresz.Előre(meret/5);
+            Fordulj(-135);
+            Tollat(fel);
+            defaultkaresz.Előre(meret/10);
+            Tölt(szin);
+            defaultkaresz.Hátra(meret/10);
+            Tollat(le);
+            Fordulj(45);
+        }
+        void szemorr(double meret, Color körszin, Color körkörüliszin, Color körkörülikörüliszin, Color körkörülikörülikörüliszin, Color orrszin)
+        {
+            Fordulj(-45);
+            szem(meret, körszin, körkörüliszin, körkörülikörüliszin, körkörülikörülikörüliszin);
+            Fordulj(180);
+            orr(meret*2, orrszin);
+            defaultkaresz.Előre(meret*2);
+            Fordulj(-90);
+            defaultkaresz.Előre(meret*2);
+            szem(meret, körszin, körkörüliszin, körkörülikörüliszin, körkörülikörülikörüliszin);
+            defaultkaresz.Hátra(meret*2);
+            Fordulj(135);
         }
     }   
 }

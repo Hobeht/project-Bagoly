@@ -11,7 +11,7 @@ namespace LogoKaresz
 {
     partial class Form1
     {
-        void nemfogyatékosív(double szög, double méret, string merre)
+        void jóív(double szög, double méret, string merre)
         {
             using(new Frissítés(false))
             { 
@@ -86,7 +86,7 @@ namespace LogoKaresz
             {
                 defaultkaresz.Előre(meret);
                 Fordulj(-90);
-                nemfogyatékosív(180, meret / 2, "Jobbra");
+                jóív(180, meret / 2, "Jobbra");
                 Tollat(fel);
                 Fordulj(-135);
                 defaultkaresz.Előre(meret/2);
@@ -99,7 +99,7 @@ namespace LogoKaresz
             {
                 defaultkaresz.Előre(meret);
                 Fordulj(90);
-                nemfogyatékosív(180, meret / 2, "Balra");
+                jóív(180, meret / 2, "Balra");
                 Tollat(fel);
                 Fordulj(135);
                 defaultkaresz.Előre(meret / 2);
@@ -121,7 +121,7 @@ namespace LogoKaresz
         void viragkulso(double meret, Color szin)
         {
             Fordulj(90);
-            nemfogyatékosív(90, meret, "Jobbra");
+            jóív(90, meret, "Jobbra");
             defaultkaresz.Előre(3*meret);
             Fordulj(5);
             defaultkaresz.Előre(meret/8);
@@ -150,14 +150,14 @@ namespace LogoKaresz
 		    }
             defaultkaresz.Előre(meret/2.77);
             defaultkaresz.Előre(meret*3);
-            nemfogyatékosív(90, meret/1.555, "Balra");
+            jóív(90, meret/1.555, "Balra");
             Tollat(fel);
             Fordulj(-90);
             defaultkaresz.Előre(meret/2.9411);
             Fordulj(-180);
             Tollat(le);
             Fordulj(-90);
-            nemfogyatékosív(90, meret, "Balra");
+            jóív(90, meret, "Balra");
             defaultkaresz.Előre(3*meret);
             Fordulj(-5);
             defaultkaresz.Előre(meret/8);
@@ -186,7 +186,7 @@ namespace LogoKaresz
 			}
             defaultkaresz.Előre(meret/2.77);
             defaultkaresz.Előre(meret*3);
-            nemfogyatékosív(90, meret/1.555, "Jobbra");
+            jóív(90, meret/1.555, "Jobbra");
             Tollat(fel);
             Fordulj(90);
             defaultkaresz.Előre((meret/2.9411)/2);
@@ -198,7 +198,7 @@ namespace LogoKaresz
         void viragbelso(double meret, Color szin)
         {
             Fordulj(90);
-            nemfogyatékosív(90, meret/1.5, "Jobbra");
+            jóív(90, meret/1.5, "Jobbra");
             defaultkaresz.Előre(4*meret);
             Fordulj(5);
             defaultkaresz.Előre(meret/8);
@@ -226,18 +226,18 @@ namespace LogoKaresz
             Fordulj(84);
             for (int i = 0; i < 4; i++)
 			{
-                nemfogyatékosív(100, meret/2, "Jobbra");   
+                jóív(100, meret/2, "Jobbra");   
                 Fordulj(100);
 			}
-            nemfogyatékosív(70, meret/1.7, "Jobbra");   
-            nemfogyatékosív(22, meret*1.2, "Balra");   
-            nemfogyatékosív(180, meret/10, "Balra");   
-            nemfogyatékosív(22, meret*1.2, "Jobbra");   
-            nemfogyatékosív(70, meret/1.7, "Balra");   
+            jóív(70, meret/1.7, "Jobbra");   
+            jóív(22, meret*1.2, "Balra");   
+            jóív(180, meret/10, "Balra");   
+            jóív(22, meret*1.2, "Jobbra");   
+            jóív(70, meret/1.7, "Balra");   
             for (int i = 0; i < 4; i++)
 			{
                 Fordulj(-100);
-                nemfogyatékosív(100, meret/2, "Balra");   
+                jóív(100, meret/2, "Balra");   
 			}
             Fordulj(-84);
             for (int i = 0; i < 6; i++)
@@ -270,7 +270,7 @@ namespace LogoKaresz
             defaultkaresz.Előre(meret/8);
             Fordulj(5);
             defaultkaresz.Előre(4*meret);
-            nemfogyatékosív(93, meret/1.45, "Jobbra");
+            jóív(93, meret/1.45, "Jobbra");
             Tollat(fel);
             Fordulj(-42);
             defaultkaresz.Előre(meret/2);
@@ -284,11 +284,11 @@ namespace LogoKaresz
             if (irany)
 	        {       
                 defaultkaresz.Előre(meret);
-                nemfogyatékosív(90, meret, "Jobbra");
+                jóív(90, meret, "Jobbra");
                 Fordulj(140);
-                nemfogyatékosív(130, meret*1.8, "Balra");
+                jóív(130, meret*1.8, "Balra");
                 defaultkaresz.Előre(meret/1.51);
-                nemfogyatékosív(180, meret/1.005, "Balra");
+                jóív(180, meret/1.005, "Balra");
                 Tollat(fel);
                 Fordulj(45);
                 defaultkaresz.Előre(meret);
@@ -300,11 +300,11 @@ namespace LogoKaresz
             else
             { 
                 defaultkaresz.Előre(meret);
-                nemfogyatékosív(90, meret, "Balra");
+                jóív(90, meret, "Balra");
                 Fordulj(-140);
-                nemfogyatékosív(130, meret*1.8, "Jobbra");
+                jóív(130, meret*1.8, "Jobbra");
                 defaultkaresz.Előre(meret/1.51);
-                nemfogyatékosív(180, meret/1.005, "Jobbra");
+                jóív(180, meret/1.005, "Jobbra");
                 Tollat(fel);
                 Fordulj(-45);
                 defaultkaresz.Előre(meret);
@@ -329,7 +329,7 @@ namespace LogoKaresz
             defaultkaresz.Előre(meret*2);
             Fordulj(-90);
             Tollat(le);
-            nemfogyatékosív(360, meret, "Balra");
+            jóív(360, meret, "Balra");
             Tollat(fel);
             Fordulj(90);
             defaultkaresz.Előre(meret);
@@ -347,7 +347,7 @@ namespace LogoKaresz
             defaultkaresz.Előre(meret/4);
             Fordulj(90);
             defaultkaresz.Előre(meret*3);
-            nemfogyatékosív(180, meret/4, "Balra");
+            jóív(180, meret/4, "Balra");
             defaultkaresz.Előre(meret*3);
             Fordulj(90);
             defaultkaresz.Előre(meret/2);
@@ -376,7 +376,7 @@ namespace LogoKaresz
             Tollat(le);
             Fordulj(90);
             Tollat(fel);
-            nemfogyatékosív(90, meret, "Jobbra");
+            jóív(90, meret, "Jobbra");
             defaultkaresz.Előre(meret/3.3);
             Tollat(le);
             viragszel(meret/2.4, 4, 0, false, holyagszin);
@@ -413,7 +413,7 @@ namespace LogoKaresz
             Fordulj(180);
             defaultkaresz.Előre(meret/3.3);
             Tollat(fel);
-            nemfogyatékosív(90, meret, "Jobbra");
+            jóív(90, meret, "Jobbra");
             Fordulj(-90);
             Tollat(le);
         }
@@ -450,7 +450,7 @@ namespace LogoKaresz
             defaultkaresz.Előre(meret/1.56739);
             Tollat(le);
             Fordulj(-90);
-            nemfogyatékosív(180, meret, "Balra");
+            jóív(180, meret, "Balra");
             defaultkaresz.Előre(meret*0.1);
             defaultkaresz.Hátra(meret*0.1);
             Fordulj(-90);
@@ -458,38 +458,38 @@ namespace LogoKaresz
             defaultkaresz.Hátra(meret*2.15);
             Tollat(le);
             Fordulj(-90);
-            nemfogyatékosív(100, meret*1.4, "Balra");
-            nemfogyatékosív(45, meret*1.45, "Balra");
-            nemfogyatékosív(62, meret*0.8, "Balra");
+            jóív(100, meret*1.4, "Balra");
+            jóív(45, meret*1.45, "Balra");
+            jóív(62, meret*0.8, "Balra");
             Fordulj(-117);
             Tollat(fel);
             defaultkaresz.Hátra(meret*2.8);
             Tollat(le);
             Fordulj(-90);
-            nemfogyatékosív(100, (meret*1.4)*1.5, "Balra");
-            nemfogyatékosív(45, (meret*1.45)*1.5, "Balra");
-            nemfogyatékosív(60, (meret*0.8)*1.5, "Balra");
+            jóív(100, (meret*1.4)*1.5, "Balra");
+            jóív(45, (meret*1.45)*1.5, "Balra");
+            jóív(60, (meret*0.8)*1.5, "Balra");
             Fordulj(-115);
             Tollat(fel);
             defaultkaresz.Hátra(meret*4.3);
             Tollat(le);
             Fordulj(-90);
-            nemfogyatékosív(35, meret*2.4, "Balra");
-            nemfogyatékosív(30, meret/2, "Balra");
+            jóív(35, meret*2.4, "Balra");
+            jóív(30, meret/2, "Balra");
             Fordulj(-84);
-            nemfogyatékosív(150, meret/1.6, "Balra");
+            jóív(150, meret/1.6, "Balra");
             Fordulj(-120);
-            nemfogyatékosív(150, meret/1.4, "Balra");
+            jóív(150, meret/1.4, "Balra");
             Fordulj(-115);
-            nemfogyatékosív(150, meret/1.2, "Balra");
+            jóív(150, meret/1.2, "Balra");
             Fordulj(-115);
-            nemfogyatékosív(158, meret/1.2, "Balra");
+            jóív(158, meret/1.2, "Balra");
             Fordulj(-149);
             Tollat(fel);
             defaultkaresz.Hátra(meret/0.231481);
             Tollat(le);
             Fordulj(90);
-            nemfogyatékosív(180, meret, "Jobbra");
+            jóív(180, meret, "Jobbra");
             Fordulj(90);
             Tollat(fel);
             defaultkaresz.Hátra(meret*2.15);
@@ -497,32 +497,32 @@ namespace LogoKaresz
             Fordulj(90);
             defaultkaresz.Hátra(meret*0.1);
             defaultkaresz.Előre(meret*0.1);
-            nemfogyatékosív(100, meret*1.4, "Jobbra");
-            nemfogyatékosív(45, meret*1.45, "Jobbra");
-            nemfogyatékosív(62, meret*0.8, "Jobbra");
+            jóív(100, meret*1.4, "Jobbra");
+            jóív(45, meret*1.45, "Jobbra");
+            jóív(62, meret*0.8, "Jobbra");
             Fordulj(117);
             Tollat(fel);
             defaultkaresz.Hátra(meret*2.8);
             Tollat(le);
             Fordulj(90);
-            nemfogyatékosív(100, (meret*1.4)*1.5, "Jobbra");
-            nemfogyatékosív(45, (meret*1.45)*1.5, "Jobbra");
-            nemfogyatékosív(60, (meret*0.8)*1.5, "Jobbra");
+            jóív(100, (meret*1.4)*1.5, "Jobbra");
+            jóív(45, (meret*1.45)*1.5, "Jobbra");
+            jóív(60, (meret*0.8)*1.5, "Jobbra");
             Fordulj(115);
             Tollat(fel);
             defaultkaresz.Hátra(meret*4.3);
             Tollat(le);
             Fordulj(90);
-            nemfogyatékosív(35, meret*2.4, "Jobbra");
-            nemfogyatékosív(30, meret/2, "Jobbra");
+            jóív(35, meret*2.4, "Jobbra");
+            jóív(30, meret/2, "Jobbra");
             Fordulj(84);
-            nemfogyatékosív(150, meret/1.6, "Jobbra");
+            jóív(150, meret/1.6, "Jobbra");
             Fordulj(120);
-            nemfogyatékosív(150, meret/1.4, "Jobbra");
+            jóív(150, meret/1.4, "Jobbra");
             Fordulj(115);
-            nemfogyatékosív(150, meret/1.2, "Jobbra");
+            jóív(150, meret/1.2, "Jobbra");
             Fordulj(115);
-            nemfogyatékosív(158, meret/1.2, "Jobbra");
+            jóív(158, meret/1.2, "Jobbra");
             Fordulj(149);
             Tollat(fel);
             defaultkaresz.Hátra(meret/3.125);

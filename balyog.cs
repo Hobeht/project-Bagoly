@@ -453,9 +453,36 @@ namespace LogoKaresz
             defaultkaresz.Hátra(meret*2.15);
             Tollat(le);
             Fordulj(-90);
-            nemfogyatékosív(90, meret*1.3, "Balra");
-            nemfogyatékosív(45, meret*1.5, "Balra");
-            nemfogyatékosív(45, meret*1.3, "Balra");
+            nemfogyatékosív(100, meret*1.4, "Balra");
+            nemfogyatékosív(45, meret*1.45, "Balra");
+            nemfogyatékosív(62, meret*0.8, "Balra");
+            Fordulj(-117);
+            Tollat(fel);
+            defaultkaresz.Hátra(meret*2.8);
+            Tollat(le);
+            Fordulj(-90);
+            nemfogyatékosív(100, (meret*1.4)*1.5, "Balra");
+            nemfogyatékosív(45, (meret*1.45)*1.5, "Balra");
+            nemfogyatékosív(60, (meret*0.8)*1.5, "Balra");
+            Fordulj(-115);
+            Tollat(fel);
+            defaultkaresz.Hátra(meret*4.3);
+            Tollat(le);
+            Fordulj(-90);
+            nemfogyatékosív(35, meret*2.4, "Balra");
+            nemfogyatékosív(30, meret/2, "Balra");
+            Fordulj(-84);
+            nemfogyatékosív(150, meret/1.6, "Balra");
+            Fordulj(-120);
+            nemfogyatékosív(150, meret/1.4, "Balra");
+            Fordulj(-115);
+            nemfogyatékosív(150, meret/1.2, "Balra");
+            Fordulj(-115);
+            nemfogyatékosív(158, meret/1.2, "Balra");
+            Fordulj(-149);
+            Tollat(fel);
+            defaultkaresz.Hátra(meret/0.231481);
+            Tollat(le);
         }
     }   
 }

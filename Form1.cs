@@ -29,18 +29,91 @@ namespace LogoKaresz
 			Előre(méret/1.18+ méret / 4.615);
 			Tollat(le);
 			Balra(90);
-            for (int i = 0; i < 9; i++)
-            {
+            
 				tollsor(6, méret / 4.615, Color.SandyBrown);
 				Tollat(fel);
 				Hátra(méret / 4.315);
 				Jobbra(90);
-				Előre(méret / 4.615 * 10);
+				Előre(méret / 4.52 * 10);
 				Tollat(le);
 				Balra(90);
-				
-			}
-			
+			//
+			tollsor(6, méret / 4.45, Color.SandyBrown);
+			Tollat(fel);
+			Hátra(méret / 4.3);
+			Jobbra(90);
+			Előre(méret / 4.4 * 10);
+			Tollat(le);
+			Balra(90);
+			//
+			tollsor(6, méret / 4.35, Color.SandyBrown);
+			Tollat(fel);
+			Hátra(méret / 4.3);
+			Jobbra(90);
+			Előre(méret / 4.3 * 10);
+			Tollat(le);
+			Balra(90);
+			//
+			tollsor(6, méret / 4.3, Color.SandyBrown);
+			Tollat(fel);
+			Hátra(méret / 4.2);
+			Jobbra(90);
+			Előre(méret / 4.28 * 10);
+			Tollat(le);
+			Balra(90);
+			//
+			tollsor(6, méret / 4.25, Color.SandyBrown);
+			Tollat(fel);
+			Hátra(méret / 4.3);
+			Jobbra(90);
+			Előre(méret / 4.25 * 10);
+			Tollat(le);
+			Balra(90);
+			//
+			tollsor(6, méret / 4.25, Color.SandyBrown);
+			Tollat(fel);
+			Hátra(méret / 4.3);
+			Jobbra(90);
+			Előre(méret / 4.3 * 10);
+			Tollat(le);
+			Balra(90);
+			//
+			tollsor(6, méret / 4.35, Color.SandyBrown);
+			Tollat(fel);
+			Hátra(méret / 4.3);
+			Jobbra(90);
+			Előre(méret / 4.5 * 10);
+			Tollat(le);
+			Balra(90);
+
+			tollsor(6, méret / 4.7, Color.SandyBrown);
+			Tollat(fel);
+			Hátra(méret / 4.3);
+			Jobbra(90);
+			Előre(méret / 4.9 * 10);
+			Tollat(le);
+			Balra(90);
+
+			tollsor(6, méret / 5.1, Color.SandyBrown);
+			Tollat(fel);
+			Hátra(méret / 5.3);
+			Jobbra(90);
+			Előre(méret / 5.5 * 10);
+			Tollat(le);
+			Balra(90);
+			tollsor(6, méret / 5.8, Color.SandyBrown);
+			Tollat(fel);
+			Hátra(méret / 4.3);
+			Jobbra(90);
+			Előre(méret / 4.8 * 10);
+			Tollat(le);
+			Balra(90);
+
+
+
+
+
+
 		}
 		void teljes_kép()
         {
@@ -48,13 +121,15 @@ namespace LogoKaresz
         }
 		void FELADAT()
 		{
-			
-			
-			
-			
-			
+
+
+
+
+			Tollat(fel);
+			Előre(50);
+			Tollat(le);
             
-			using(new Frissítés(false)) { teljes_kép(); }
+			using(new Frissítés(false)) { teljesbagoly(80); }
             
 				
 			

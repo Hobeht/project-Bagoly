@@ -81,6 +81,8 @@ namespace LogoKaresz
 		#region keretdarab
 		void keretdarab(int méret, Color ív_szín, Color körszín, bool irány)
 		{
+            using(new Frissítés(false))
+            { 
 			if (irány == true)
 			{
 				Ív(90, méret);
@@ -185,7 +187,7 @@ namespace LogoKaresz
 				Tollat(le);
 				Balra(90);
 			}
-
+            }
 		}
 		#endregion
 		#region toll

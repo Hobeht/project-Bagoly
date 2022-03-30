@@ -106,43 +106,39 @@ namespace LogoKaresz
 			Hátra(méret / 4.3);
 			Jobbra(90);
 			Előre(méret / 4.8 * 10);
-			Tollat(le);
 			Balra(90);
-
-
-
-
-
-
+			Tollat(le);
 		}
 		void teljes_kép()
         {
-			KERET(11, 14, 11, 11, 14, 11, 15, Color.White, Color.Brown);
+			KERET(11, 14, 11, 11, 14, 11, 16, Color.White, Color.Brown);
+			Tollat(fel);
+			Előre(100);
+			Tollat(le);
+            teljesbagoly(63);
+			Tollat(fel);
+			Hátra(48);
+			Fordulj(-90);
+			Előre(50);
+			Fordulj(90);
+			Tollat(le);
         }
 		void FELADAT()
-		{
-
-
-
-
+        { 
+			/*
 			Tollat(fel);
 			Előre(50);
 			Tollat(le);
             
-			using(new Frissítés(false)) { teljesbagoly(80); }
-            
-				
-			
-				
-				
-				
-			
-				
-			
-
-
-
-
+			using(new Frissítés(false))
+			{ 
+				teljesbagoly(80); 
+			}
+			 */
+			using(new Frissítés(false))
+            { 
+			teljes_kép();
+			}
 		}
 	}
 }

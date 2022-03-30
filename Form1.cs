@@ -20,7 +20,7 @@ namespace LogoKaresz
 			Hátra(méret/1.71428571);
 
 			Tollat(le);
-			szemorr(méret/8, Color.White, Color.Red, Color.Black, Color.Blue, Color.Purple);
+			szemorr(méret/8, Color.White, Color.Black, Color.SandyBrown, Color.Green, Color.Black);
 			Jobbra(180);
 			Tollat(fel);
 			Hátra(méret/3);
@@ -113,15 +113,37 @@ namespace LogoKaresz
         {
 			KERET(11, 14, 11, 11, 14, 11, 16, Color.White, Color.Brown);
 			Tollat(fel);
-			Előre(100);
+			Előre(5);
+			Fordulj(90);
+			Előre(7);
+			Tollat(le);
+			Előre(5);
+			Hátra(5);
+			Tollat(fel);
+			Fordulj(-90);
+			Előre(95);
 			Tollat(le);
             teljesbagoly(63);
 			Tollat(fel);
 			Hátra(48);
 			Fordulj(-90);
-			Előre(50);
+			Előre(100);
 			Fordulj(90);
 			Tollat(le);
+			egeszvirag(30, Color.Green, Color.White, Color.SandyBrown, Color.White, Color.White, Color.SandyBrown, Color.White);
+			Tollat(fel);
+			Hátra(222.5);
+			Fordulj(90);
+			Előre(238);
+			Fordulj(-90);
+			Tollat(le);
+			egeszvirag(30, Color.Green, Color.White, Color.SandyBrown, Color.White, Color.White, Color.SandyBrown, Color.White);
+			Tollat(fel);
+			Előre(30);
+			Tölt(Color.DimGray);
+			Tollat(le);
+			/*
+			 */
         }
 		void FELADAT()
         { 
@@ -137,7 +159,10 @@ namespace LogoKaresz
 			 */
 			using(new Frissítés(false))
             { 
-			teljes_kép();
+				/*
+				KERET(11, 14, 11, 11, 14, 11, 16, Color.White, Color.Brown);
+				 */
+				teljes_kép();
 			}
 		}
 	}
